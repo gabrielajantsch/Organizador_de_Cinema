@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>N2 - Dinamismo na WEB</title>
+  <title>Organizador de Cinema em Casa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>Gerenciador de Conteúdo (API)</h1>
+    <h1>🎬 CineScheduler</h1>
+    <p>Organize sua noite de cinema em casa</p>
   </header>
 
   <main>
     <section id="form-section">
-      <h2 id="form-title">Adicionar Novo Item</h2>
-      <input type="hidden" id="item-id"> <input type="text" id="input-title" placeholder="Digite o título aqui...">
-      <button id="btn-salvar" onclick="salvarItem()">Salvar</button>
+      <h2 id="form-title">Agendar Novo Filme</h2>
+      
+      <input type="hidden" id="item-id">
+      
+      <div class="input-group">
+        <label for="input-title">Nome do Filme:</label>
+        <input type="text" id="input-title" placeholder="Ex: Interestelar, Matrix...">
+      </div>
+
+      <div class="input-group">
+        <label for="input-date">Data da Sessão:</label>
+        <input type="text" id="input-date" placeholder="Ex: Sábado às 20h00">
+      </div>
+
+      <button id="btn-salvar" onclick="salvarFilme()">Agendar Filme</button>
     </section>
 
     <section id="list-section">
-      <h2>Itens Carregados</h2>
-      <ul id="lista-dados">
+      <h2>📅 Seus Filmes Agendados</h2>
+      <ul id="lista-filmes">
         </ul>
     </section>
   </main>
